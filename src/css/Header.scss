@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap");
+
+nav {
+  font-family: "Raleway", sans-serif;
+  width: 100vw;
+  height: 12vh;
+  background: #ffc23d;
+  display: flex;
+  font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+  align-items: center;
+  a {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: 0.2s all;
+    color: rgb(12, 12, 12);
+    &:hover {
+      background: rgba($color: #000000, $alpha: 0.2);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    position: sticky;
+    top: 0;
+  }
+}

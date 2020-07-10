@@ -1,0 +1,127 @@
+form {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  * {
+    font-family: "Open Sans", sans-serif;
+  }
+  label {
+    font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 700;
+    padding: 0.5em 0 0.2em 0;
+    color: rgb(44, 44, 44);
+  }
+  input[type="text"],
+  textarea {
+    width: 100%;
+    border: #ccc 2px solid;
+    border-radius: 10px;
+    padding: 0.6em 0.4em;
+    font-size: calc(20px + (20 - 20) * ((100vw - 300px) / (1600 - 300)));
+    margin: 0 1em 0 0;
+  }
+
+  .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .inputfile + label {
+    width: fit-content;
+    margin: 1em 0 0 0;
+    padding: 1em 3em;
+    font-size: calc(20px + (20 - 20) * ((100vw - 300px) / (1600 - 300)));
+    background: #ffc23d;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 6px;
+  }
+
+  .inputfile:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  img {
+    width: 80%;
+  }
+  textarea {
+    height: 20vh;
+    resize: none;
+  }
+  button {
+    align-self: center;
+    width: fit-content;
+    margin: 1em 0;
+    padding: 1em 3em;
+    font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+    background: #71e284;
+    color: rgb(44, 44, 44);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 6px;
+  }
+
+  .gg-software-upload {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    transform: scale(var(--ggs, 1));
+    width: 16px;
+    height: 6px;
+    border: 2px solid;
+    border-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-top: 8px;
+  }
+
+  .gg-software-upload::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid;
+    border-top: 2px solid;
+    transform: rotate(45deg);
+    left: 2px;
+    bottom: 4px;
+  }
+
+  .gg-software-upload::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+    left: 5px;
+    bottom: 3px;
+  }
+}
+
+.swal2-container {
+  font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width: 1100px) {
+  form {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    .inputfile + label {
+      width: 100%;
+    }
+  }
+}

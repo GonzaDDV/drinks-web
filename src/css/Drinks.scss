@@ -1,0 +1,123 @@
+.grid-tragos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  .trago {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.4rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 3px;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px rgb(226, 226, 226);
+    img {
+      width: 100%;
+    }
+    h3 {
+      font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1600 - 300)));
+      text-align: center;
+    }
+    h6 {
+      font-size: calc(18px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+    }
+  }
+}
+
+.container-trago-extended {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.3s animExtended;
+  background: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  .trago-extended {
+    width: 95vw;
+    height: 95vh;
+    padding: 4vh 4vw;
+    background: #fff;
+    z-index: 10;
+    position: relative;
+    img {
+      max-height: 300px;
+      display: block;
+      margin: auto;
+    }
+    h3 {
+      font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1600 - 300)));
+    }
+    h6 {
+      font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1600 - 300)));
+      font-weight: 400;
+    }
+    p {
+      width: 60%;
+      margin: 3vh auto;
+      padding: 0.4rem 0;
+      font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1600 - 300)));
+      line-height: 1.65;
+      word-wrap: break-word;
+    }
+  }
+  .gg-close {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+  }
+  .gg-close::after,
+  .gg-close::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+    border-radius: 5px;
+  }
+  .gg-close::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .trago-extended {
+    img {
+      width: 100% !important;
+    }
+    .gg-close {
+      top: -15px;
+      right: -5px;
+      &::after,
+      &::before {
+        box-shadow: 1px 1px 20px #fff;
+        width: 30px;
+      }
+    }
+  }
+}
+
+@keyframes animExtended {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
