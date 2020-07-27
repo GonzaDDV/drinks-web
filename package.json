@@ -13,7 +13,8 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "sweetalert2": "^9.15.2"
+    "sweetalert2": "^9.15.2",
+    "universal-cookie": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

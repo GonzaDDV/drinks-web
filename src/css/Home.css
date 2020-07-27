@@ -1,0 +1,81 @@
+.home {
+  text-align: center;
+  max-height: 88vh;
+}
+
+.home .trago-home {
+  padding: 2vh 1vw;
+  max-width: 600px;
+  width: 100%;
+  min-height: 400px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .trago-home #skeleton {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #ccc;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .trago-home .finished {
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.home .trago-home .title-drink {
+  font-size: calc(30px + (46 - 30) * ((100vw - 300px) / (1600 - 300)));
+  color: #272727;
+}
+
+.home .trago-home .author-drink {
+  line-height: 1.8;
+  font-size: 1.4rem;
+  color: #444444;
+}
+
+.home .trago-home .img-drink {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.home .btn-tragos {
+  display: inline-block;
+  margin: 1em 0;
+  padding: 1.2em;
+  font-size: 1.4rem;
+  background: #ffc23d;
+}
+
+.container-mayor-edad {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  background: #ffc23d;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-mayor-edad button {
+  margin: 1em 0;
+  padding: 1.2em;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: 0.2s;
+}
